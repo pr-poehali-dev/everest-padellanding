@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
+const LOGO = "https://cdn.poehali.dev/projects/79947095-a3f7-499f-ba89-ef8d40f187be/bucket/5ca6fc9c-45e8-43e3-abab-612549b7de80.png";
 const IMG_COURT_1 = "https://cdn.poehali.dev/projects/79947095-a3f7-499f-ba89-ef8d40f187be/files/87a1973d-b204-4163-ad60-e70633657fe6.jpg";
 const IMG_COURT_2 = "https://cdn.poehali.dev/projects/79947095-a3f7-499f-ba89-ef8d40f187be/files/0e09a9c9-8080-4f67-9b6e-f48f4b77bf96.jpg";
 const IMG_COURT_3 = "https://cdn.poehali.dev/projects/79947095-a3f7-499f-ba89-ef8d40f187be/files/765722af-5f3d-4aad-95d1-39acd34ac746.jpg";
@@ -118,14 +119,8 @@ export default function Index() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-indigo flex items-center justify-center" style={{ backgroundColor: "var(--indigo)" }}>
-              <span className="text-white font-display text-sm font-bold">Э</span>
-            </div>
-            <div>
-              <div className="font-display font-semibold text-sm leading-none" style={{ color: "var(--indigo)" }}>ЭВЕРЕСТ</div>
-              <div className="text-xs text-gray-400 font-body">падел-корты</div>
-            </div>
+          <div className="flex items-center">
+            <img src={LOGO} alt="Эверест" className="h-9 w-auto object-contain" />
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-body text-gray-600">
             <a href="#specs" className="hover:text-gray-900 transition-colors">Характеристики</a>
@@ -560,14 +555,9 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-10 border-t border-white/5" style={{ backgroundColor: "var(--indigo-dark)" }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded flex items-center justify-center" style={{ backgroundColor: "var(--lime)" }}>
-              <span className="text-gray-900 font-display text-sm font-bold">Э</span>
-            </div>
-            <div>
-              <div className="font-display font-semibold text-white text-sm leading-none">ООО «ЭВЕРЕСТ»</div>
-              <div className="text-white/40 text-xs font-body">Единственный производитель падел-кортов на Урале</div>
-            </div>
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <img src={LOGO} alt="Эверест" className="h-8 w-auto object-contain brightness-0 invert opacity-90" />
+            <div className="text-white/40 text-xs font-body">Единственный производитель падел-кортов на Урале</div>
           </div>
           <div className="text-white/30 text-xs font-body text-center">
             © 2024 ООО «Эверест». Все права защищены.
